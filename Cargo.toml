@@ -1,0 +1,18 @@
+[package]
+name = "rust-lightning-workshop"
+version = "0.1.0"
+edition = "2021"
+authors = ["Francisco Calderón <fjcalderon@gmail.com>"]
+description = "Tutorial para desarrollar una Lightning App para recibir Propinas en Rust"
+license = "MIT"
+
+[dependencies]
+dotenv = "0.15.0"
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+tonic_openssl_lnd = "0.1.5"
+serde = { version = "1.0.145" }
+hex = "0.4.3"
+
+[dependencies.rocket_dyn_templates]
+version = "0.1.0-rc.2"
+features = ["handlebars"]

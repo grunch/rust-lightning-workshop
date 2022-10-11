@@ -1,0 +1,42 @@
+{{#*inline "content"}}
+    <div id="form" class="mt-5 mb-5 collapse">
+      <form autocomplete="off" class="row mt-3 g-3" id="form">
+        <div class="col">
+          <div class="form-floating mb-3">
+            <input type="text" id="description" class="form-control">
+            <label for="description">Descripción</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" id="amount" class="form-control" required>
+            <label for="amount">Monto</label>
+          </div>
+
+          <div class="mb-3">
+            <button type="button" id="send-btn" class="btn btn-light btn-lg">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="invoice" class="mt-5 mb-5 collapse bg-light rounded-3 jumbotron">
+      <h3 id="invoice-memo">LNTip</h3>
+      <h3><span id="invoice-amount">0</span> SATs</h3>
+      <p class="lead">Para continuar, haga un pago con una billetera con soporte Bitcoin Lightning Network a la siguiente factura.</p>
+      <p class="lead">Esta factura expira en 10 minutos.</p>
+      <hr class="my-4">
+      <h6>Factura:</h6>
+      <p id="invoice-text" class="text-break"></p>
+    </div>
+
+    <div id="success-box" class="mt-5 mb-5 collapse bg-light rounded-3 jumbotron">
+      <div align="center">
+        <iframe src="https://giphy.com/embed/BzyTuYCmvSORqs1ABM" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+      <hr class="my-4">
+      <p class="lead" align="center">¡Pago realizado correctamente! 😀</p>
+      <hr class="my-4">
+    </div>
+{{/inline}}
+{{#*inline "scripts"}}
+    <script src="/public/main.js"></script>
+{{/inline}}
+{{~> layout~}}
